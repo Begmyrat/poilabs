@@ -7,13 +7,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_gray">
+        android:background="@color/background_gray"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
             android:id="@+id/carousel"
             android:layout_width="0dp"
             android:layout_height="450dp"
             android:layout_marginTop="20dp"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +38,8 @@
             app:autoPlay="false"
             app:autoPlayDelay="3000"
             app:touchToPause="true"/>
+
+        <include layout="@layout/country_list"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

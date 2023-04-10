@@ -14,4 +14,5 @@
     <color name="text_light">#687684</color>
     <color name="red_violet">#FF1165</color>
     <color name="green_success">#4CAF50</color>
+    <color name="bg_gray">#EBEBEB</color>
 </resources>

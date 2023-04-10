@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.viewbinding.ViewBinding
@@ -18,6 +19,7 @@ import com.example.poilabschallange.databinding.CustomCarouselItemBinding
 import com.example.poilabschallange.databinding.FragmentHomeBinding
 import com.example.poilabschallange.domain.usecase.HomeUseCase
 import com.example.poilabschallange.presentation.home.viewmodel.HomeViewModel
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import dagger.hilt.android.AndroidEntryPoint
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
@@ -30,6 +32,8 @@ class HomeFragment : Fragment() {
     private lateinit var carouselData: MutableList<CarouselItem>
     private lateinit var viewModel: HomeViewModel
 
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,8 +44,6 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         return binding.root
     }
-
-    // sdds
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
