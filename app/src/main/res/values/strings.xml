@@ -6,6 +6,6 @@
     <string name="independent">independent:</string>
     <string name="isUnMember">is UN Member?</string>
     <string name="currency">currency:</string>
-    <string name="capital">capital:</string>
+    <string name="capital">capital: %s</string>
 
 </resources>

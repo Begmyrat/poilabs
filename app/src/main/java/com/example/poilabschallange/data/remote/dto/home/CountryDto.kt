@@ -50,7 +50,8 @@ data class Maps(
 
 data class Flag(
     val png: String?,
-    val svg: String?
+    val svg: String?,
+    val alt: String?
 )
 
 data class CapitalInfo(

@@ -2,5 +2,6 @@
 <resources>
 
     <dimen name="card_item_margin">10dp</dimen>
+    <dimen name="margin_edge">20dp</dimen>
 
 </resources>
