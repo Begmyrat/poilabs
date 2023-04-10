@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">poilabschallange</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="independent">independent:</string>
+    <string name="isUnMember">is UN Member?</string>
+    <string name="currency">currency:</string>
+    <string name="capital">capital:</string>
+
+</resources>
