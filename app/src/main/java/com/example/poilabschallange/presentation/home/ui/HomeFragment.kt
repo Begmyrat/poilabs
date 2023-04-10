@@ -41,6 +41,8 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    // sdds
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
