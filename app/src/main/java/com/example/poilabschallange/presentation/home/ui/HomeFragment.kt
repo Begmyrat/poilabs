@@ -6,26 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.bumptech.glide.Glide
 import com.example.poilabschallange.R
-import com.example.poilabschallange.data.remote.api.HomeService
-import com.example.poilabschallange.data.repository.HomeRepository
-import com.example.poilabschallange.data.repository.impl.HomeRepositoryImpl
 import com.example.poilabschallange.databinding.CustomCarouselItemBinding
 import com.example.poilabschallange.databinding.FragmentHomeBinding
-import com.example.poilabschallange.domain.usecase.HomeUseCase
 import com.example.poilabschallange.presentation.home.ui.adapter.MyCountryListAdapter
 import com.example.poilabschallange.presentation.home.viewmodel.HomeViewModel
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import dagger.hilt.android.AndroidEntryPoint
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
-import org.imaginativeworld.whynotimagecarousel.utils.setImage
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -62,19 +58,22 @@ class HomeFragment : Fragment() {
     private fun addObservers() {
         viewModel.countries.observe(viewLifecycleOwner){
             Log.d("COUNTRIES_HOME", it.toString())
-//            carouselData.addAll(it.map { entity ->
-//                CarouselItem(
-//                    imageUrl = entity.flags?.png,
-//                    headers = mapOf(
-//                        "title" to "${entity.name?.official}",
-//                        "capital" to "${entity.capital?.joinToString(",")}",
-//                        "currency" to "${entity.currencies?.keys?.toList()?.getOrNull(0)}"
-//                    )
-//                )
-//            })
-//            binding.carousel.setData(carouselData)
+            carouselData.addAll(it.map { entity ->
+                CarouselItem(
+                    imageUrl = entity.flags?.png,
+                    headers = mapOf(
+                        "title" to "${entity.name?.official}",
+                        "capital" to "${entity.capital?.joinToString(",")}",
+                        "currency" to "${entity.currencies?.keys?.toList()?.getOrNull(0)}"
+                    )
+                )
+            })
+            binding.carousel.setData(carouselData)
 
             adapterCountry.differ.submitList(it)
+//            binding.coordinatorLayout.performClick()
+            binding.root.findViewById<CoordinatorLayout>(R.id.coordinatorLayout).performClick()
+            binding.root.findViewById<CoordinatorLayout>(R.id.coordinatorLayout).isClickable = false
         }
     }
 
