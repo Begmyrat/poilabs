@@ -22,5 +22,6 @@ data class CountryEntity(
     val timezones: List<String>?,
     val continents: List<String>?,
     val flags: Flag?,
-    val capitalInfo: CapitalInfo?
+    val capitalInfo: CapitalInfo?,
+    val borders: List<String>?
 )

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_rounded_view"
+            android:paddingVertical="10dp"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="60dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_stick"
+                android:layout_width="80dp"
+                android:layout_height="3dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/bg_gray"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/t_swipeMeUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/card_stick"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/card_item_margin"
+                android:gravity="center"
+                android:textColor="@color/text_light"
+                android:text="@string/swipeMeUp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_filterBy"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_edge"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:hint="@string/filterByRegion"
+                app:boxCornerRadiusBottomEnd="3dp"
+                app:boxCornerRadiusBottomStart="3dp"
+                app:boxCornerRadiusTopEnd="3dp"
+                app:boxCornerRadiusTopStart="3dp"
+                app:boxStrokeColor="@color/bg_gray"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t_swipeMeUp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdown_filterByRegion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bg_gray"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textAutoComplete"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_sortBy"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_edge"
+                android:focusable="false"
+                android:hint="@string/sortBy"
+                android:layout_marginTop="@dimen/card_item_margin"
+                app:boxCornerRadiusBottomEnd="3dp"
+                app:boxCornerRadiusBottomStart="3dp"
+                app:boxCornerRadiusTopEnd="3dp"
+                app:boxCornerRadiusTopStart="3dp"
+                app:boxStrokeColor="@color/bg_gray"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tl_filterBy">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdown_sortBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bg_gray"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textAutoComplete"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/b_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tl_sortBy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/margin_edge"
+                android:layout_marginTop="@dimen/margin_edge"
+                android:text="@string/ok"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:backgroundTint="@color/text_primary"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

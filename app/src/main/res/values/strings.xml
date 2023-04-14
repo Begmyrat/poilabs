@@ -3,9 +3,37 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="independent">independent:</string>
+    <string name="independent">Independent:</string>
+    <string name="filterByRegion">Filter by region</string>
+    <string name="ok">OK</string>
+    <string name="orderBy">Order by</string>
+    <string name="sortBy">Sort by</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="isUnMember">is UN Member?</string>
-    <string name="currency">currency:</string>
-    <string name="capital">capital: %s</string>
+    <string name="currency">Currency:</string>
+    <string name="capital">Capital:</string>
+    <string name="phone">Phone:</string>
+    <string name="timeZone">Time Zone:</string>
+    <string name="region">Region:</string>
+    <string name="population">Population:</string>
+    <string name="area">Area:</string>
+    <string name="search">Search...</string>
+    <string name="swipeMeUp">Swipe Me Up!</string>
+    <string name="notEnoughInfo">Not enough info</string>
+    <string name="error_server">Error is occurred, please be aware that your internet connection might be off. Please try again</string>
 
+    <string-array name="filter_types">
+        <item>europe</item>
+        <item>asia</item>
+        <item>north america</item>
+        <item>south america</item>
+        <item>africa</item>
+        <item>ocean</item>
+    </string-array>
+
+    <string-array name="sort_types">
+        <item>population</item>
+        <item>alphabetically</item>
+    </string-array>
 </resources>
