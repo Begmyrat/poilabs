@@ -3,6 +3,8 @@
 ## REST countries sample app that loads information from REST countries API V3 to show an approach to using some of the best practices in Android Development.
 
 On the very first launch app send the request to the API and fetch the data (all countries), after successfully fetch set the data to UI
+When user clicks the country item, application user goes to the Detail screen and can see whole information about that country.
+There is a map that the user can see the country on the globa.
 
 ## Used
 - Kotlin
